@@ -451,15 +451,55 @@ Using the coefficients from this regression model and using the set of 'X' varia
 
 ## 4. Conclusion and Recommedations
 
-### 4.1 Key Findings
-The study found that market rents and housing values have consistently increased over the years. There are significant differences in market values between occupied and vacant units, with occupied units typically having higher market values.
+### **4.1 Key Findings**
 
-### 4.2 Policy Implications
-The increasing trend in housing rents may indicate a growing affordability issue for lower-income households. Policymakers should consider interventions to control rent inflation and increase housing accessibility.
+This project provided valuable insights into the U.S. housing market between 2005 and 2013, with a focus on understanding market value differences, the impact of occupancy status, and the trends in fair market rents (FMK). The key findings are as follows:
 
-### 4.3 Recommendations for Stakeholders
-- **Real Estate Investors**: Focus on areas with high growth in market values and rents.
-- **Government Agencies**: Implement rent controls and affordable housing programs to address increasing rent pressures.
-- **Homebuyers**: Consider long-term market trends and potential appreciation when purchasing properties.
+- **Market Value Differences Between Occupied and Vacant House Units:**  
+The analysis confirmed that occupied housing units consistently have higher market values compared to vacant housing units across all years. This suggests that occupancy status is a significant factor influencing the pricing of housing in the U.S.  
 
-This analysis provides valuable insights into housing market trends and offers actionable recommendations for both market participants and policymakers.
+- **Fair Market Rent Trends:**  
+The study found that fair market rents (FMK) steadily increased from 2005 to 2013. However, there was a noticeable surge in rents in 2009, which may be attributed to the economic recession in 2008. This sudden increase indicates the market's response to external economic shocks, which affected housing demand and rental prices during the recession.  
+
+- **Regression Model Performance:**  
+The regression model trained on housing values for 2013 yielded an R-squared score of approximately 0.55, indicating that approximately 55% of the variation in market values can be explained by the independent variables used in the model. This suggests that while the model provides a reasonable fit, there is still significant unexplained variance in the data.  
+When using data from 2011 as the independent variables to predict 2013 housing values, the R-squared score dropped to approximately 0.44, indicating that the predictive power of the model decreased when using older data. The model's prediction error, as measured by the Mean Absolute Deviation (MAD), was $88,688.53, which indicates the level of difference between the predicted and actual market values. Although the error is notable, the model still provides a useful approximation for forecasting. 
+
+- **Data Analysis with Excel Limitations:**  
+
+For study and application purposes, I chose Excel to perform this analysis, as it provided a solid foundation for understanding the algorithm behind statistical analysis. However, the dataset used in the analysis was extensive, spanning five years and containing multiple variables (a total of 211,341 rows across 27 variables after data cleansing). While Excel was sufficient for this project, its limitations became apparent when working with large datasets, leading to increased processing time and slower performance. In my opinion, we should consider a more suitable tool for this type of analysis such as Python programming language, which offers powerful statistical libraries such as Pandas, NumPy, and Scikit-learn for model training, along with visualization tools like Matplotlib to create clear, impactful charts and faster execution times.  
+
+### **4.2 Policy Implications**
+
+The findings from this analysis have several important policy implications for housing and urban development:
+
+- **Impact of Occupancy Status on Housing Prices:**  
+  The consistent difference in market values between occupied and vacant housing units suggests that policies aimed at increasing homeownership rates or reducing vacancy rates could have a positive impact on housing market values. For example, incentivizing homeownership or creating programs that reduce vacancy rates in urban areas may help stabilize or increase housing prices, especially in high-demand regions.
+
+- **Effect of Economic Events on Rent and Market Prices:**  
+  The sharp rise in fair market rents in 2009 due to the economic recession underscores the vulnerability of the housing market to economic shocks. Policymakers could consider implementing housing policies that buffer against such volatility, such as rent control measures, subsidies for renters, or economic support programs to prevent sharp increases in rents during recessions.
+
+- **Housing Affordability and Market Regulation:**  
+  The analysis also highlights the importance of understanding the relationship between market rents and housing values in order to make informed decisions on affordable housing initiatives. If rents rise disproportionately compared to income levels, it could lead to affordability issues. Policymakers should focus on balancing market forces with affordable housing initiatives to ensure accessibility for all income groups.
+
+### **4.3 Recommendations for Stakeholders**
+
+Based on the findings of this study, the following recommendations are made for various stakeholders in the housing market:
+
+- **Real Estate Professionals:**  
+  Real estate agents, investors, and developers should be aware of the trends in occupancy and market rents. The analysis suggests that properties with higher occupancy rates tend to have higher market values. Investors could focus on areas with higher occupancy rates or identify strategies to reduce vacancy rates, which could lead to higher returns.
+
+- **Government and Policymakers:**  
+  Given the role that economic events like recessions play in affecting housing markets, policymakers should consider enacting safeguards to mitigate the negative impacts of such shocks. This could include expanding affordable housing programs, rent control policies, or targeted financial support for renters and homeowners during times of economic uncertainty. Additionally, policies that encourage homeownership could help stabilize markets, especially in regions with high vacancy rates.
+
+- **Data Analysts and Researchers:**  
+  For future studies and modeling efforts, it is recommended to use more advanced tools like Python or R for handling larger datasets and performing complex statistical analysis. While Excel is useful for smaller datasets, it has limitations when dealing with big data. Python libraries like pandas, numpy, and scikit-learn offer more robust functionality for data manipulation, analysis, and machine learning, enabling more accurate predictions and more efficient data processing.
+
+- **Investors and Property Developers:**  
+  Understanding market trends and using predictive models can give investors and developers a competitive edge. The regression models created in this study offer a solid starting point for predicting market values, but they should be updated regularly with new data and improved features to provide more accurate forecasting. Integrating external factors such as local economic indicators, government policies, and market sentiment into predictive models could further refine predictions and improve decision-making.
+
+---
+
+### **Conclusion**
+
+This project successfully analyzed trends in the U.S. housing market from 2005 to 2013, revealing significant insights into how occupancy status, fair market rents, and economic events impact housing prices. The analysis provided a foundation for developing regression models that predict housing market values and forecast future trends. Although the model explained a substantial portion of market value variation, further improvements are needed for higher accuracy. The project also highlighted the need for more efficient data processing tools and the potential policy implications of the findings for real estate professionals, government officials, and other stakeholders involved in housing markets.
