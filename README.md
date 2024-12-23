@@ -1,11 +1,5 @@
 # **Housing Values Analysis with Hypothesis Testing (2005-2013)**
 
-## Table of Contents
-
-Here is the table of contents for the README, formatted with relative navigation for better readability:
-
----
-
 ## **Table of Contents**
 
 1. **[Business Problem Overview](#1-business-problem-overview)**  
