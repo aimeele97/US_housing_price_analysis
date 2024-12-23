@@ -297,7 +297,7 @@ Note: 'Northeast', Midwest' and 'South' are dummy variables for the categorical 
 Note: 'Adequate' is a dummy variable =1 when the categorical variable `ZADEQ` is ='1', otherwise it is =0.  
 Note: This regression also takes a logarithmic transformation of many of the 'X' variables_
 
-Histogram distribution of VALUE itself and LN(VALUES) as 
+Plot the histogram distribution of VALUE itself and LN(VALUES)   
 
 ![alt text](image.png)
 
@@ -373,13 +373,14 @@ The results emphasize the multifaceted nature of housing market values, where ec
 
 This model perform the predicted regression model that is using X variables in year 2011 and Y variable in year 2013.
 
-Data pre-processing: I used vlookup to merge the dataset as below.
- (VLOOKUP command using the CONTROL variable to match the data files) 
+Data pre-processing: I used vlookup to merge the dataset together, sample syntax as follows:  
+
 ![alt text](image-1.png)
 
 Then I seprated the dataset into 2 different random different datsets, one is for training, the other for testing the model after training(contains 1000 radom rows). by doing that, i used `RAND()` function to collect randomly 1000 rows.
 
-After training, I predict the market values for the holdout dataset that the model haven't seen before. Then calculate the mean absolute deviation equation to see how different between actiual values and predicted values.  
+After training, I predict the market values for the holdout dataset that the model haven't seen before. Then calculate the mean absolute deviation equation to see how different between actiual values and predicted values. 
+  
 ![alt text](image-2.png)
 
 ### REGRESSION EQUATION:  
