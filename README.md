@@ -292,7 +292,7 @@ LN(VALUE)=β0​+β1​⋅Northeast+β2​⋅Midwest+β3​⋅South+β4​⋅LN(
 
 **Dummy variable transfromation**  
 
-- I then transfromt the string values into numeric using dummy method.
+- I then transformed the string values into numeric using dummy method.
 
 _Note: 'Metro' is a dummy variable = 1 when `METRO3` variable is = '1', otherwise it is =0.  
 Note: 'Northeast', Midwest' and 'South' are dummy variables for the categorical variable `REGION`.  
