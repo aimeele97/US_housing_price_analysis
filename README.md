@@ -480,19 +480,13 @@ The findings from this analysis have several important policy implications for h
 
 ### **4.3 Recommendations for Stakeholders**
 
-Based on the findings of this study, the following recommendations are made for various stakeholders in the housing market:
+Based on the findings of this study, the following recommendations are made for stakeholders in the housing market:
 
 - **Real Estate Professionals:**  
   Real estate agents, investors, and developers should be aware of the trends in occupancy and market rents. The analysis suggests that properties with higher occupancy rates tend to have higher market values. Investors could focus on areas with higher occupancy rates or identify strategies to reduce vacancy rates, which could lead to higher returns.
 
 - **Government and Policymakers:**  
   Given the role that economic events like recessions play in affecting housing markets, policymakers should consider enacting safeguards to mitigate the negative impacts of such shocks. This could include expanding affordable housing programs, rent control policies, or targeted financial support for renters and homeowners during times of economic uncertainty. Additionally, policies that encourage homeownership could help stabilize markets, especially in regions with high vacancy rates.
-
-- **Data Analysts and Researchers:**  
-  For future studies and modeling efforts, it is recommended to use more advanced tools like Python or R for handling larger datasets and performing complex statistical analysis. While Excel is useful for smaller datasets, it has limitations when dealing with big data. Python libraries like pandas, numpy, and scikit-learn offer more robust functionality for data manipulation, analysis, and machine learning, enabling more accurate predictions and more efficient data processing.
-
-- **Investors and Property Developers:**  
-  Understanding market trends and using predictive models can give investors and developers a competitive edge. The regression models created in this study offer a solid starting point for predicting market values, but they should be updated regularly with new data and improved features to provide more accurate forecasting. Integrating external factors such as local economic indicators, government policies, and market sentiment into predictive models could further refine predictions and improve decision-making.
 
 ---
 
