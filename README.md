@@ -1,39 +1,83 @@
+# **Housing Values Analysis with Hypothesis Testing (2005-2013)**
 
-# Problems statement
-1. analyze the differences in Market Rents across
-various years.
+## Table of Contents
+
+Here is the table of contents for the README, formatted with relative navigation for better readability:
+
+---
+
+## **Table of Contents**
+
+## **Table of Contents**
+
+1. **[Business Problem Overview](#1-business-problem-overview)**  
+   - **[1.1 Objective](#11-objective)**  
+   - **[1.2 Scope and Data Description](#12-scope-and-data-description)**  
+
+2. **[Problem Statement](#2-problem-statement)**  
+   - **[2.1 Market Rent Analysis Across Years](#21-market-rent-analysis-across-years)**  
+   - **[2.2 Hypothesis Testing for Market Value Differences](#22-hypothesis-testing-for-market-value-differences)**  
+   - **[2.3 Predicting Housing Market Values Using Regression](#23-predicting-housing-market-values-using-regression)**  
+   - **[2.4 Forecasting Future Housing Values Using Regression](#24-forecasting-future-housing-values-using-regression)**  
+
+3. **[Data Collection and Preprocessing](#3-data-collection-and-preprocessing)**  
+   - **[3.1 Data Sources](#31-data-sources)**  
+   - **[3.2 Variables and Descriptions](#32-variables-and-descriptions)**  
+   - **[3.3 Data Cleaning](#33-data-cleaning)**  
+   - **[3.4 Data Merging](#34-data-merging)**  
+
+4. **[Methodology](#4-methodology)**  
+   - **[4.1 Hypothesis Testing for Market Value Differences](#41-hypothesis-testing-for-market-value-differences-methodology)**  
+         **[4.1.1 Market values differences between occupied and vacant housing units](#411-market-values-differences-between-occupied-and-vacant-housing-units)** 
+         **[4.1.2 Market values differences between fair market rent (FMK)](#412-market-values-differences-between-fair-market-rent-fmk)**
+         
+   - **[4.2 Regression Analysis for Current Housing Market Values for Single Family Units for Year 2013](#42-regression-analysis-for-current-housing-market-values-for-single-family-units-for-year-2013)**
+   - **[4.3 Future Market Value Forecasting](#43-future-market-value-forecasting)** 
+
+5. **[Conclusion and Recommendations](#5-conclusion-and-recommedations)**
+   - **[5.1 Key Findings](#51-key-findings)** 
+   - **[5.2 Policy Implications](#52-policy-implications)**
+   - **[5.3 Recommendations for Stakeholders](#53-recommendations-for-stakeholders)**
 
 
+---
 
-Solutions
-1. analyze the differences in Market Rents across
-various years.
-Tasks: 
-Pairwise comparisons across years.
- Pairing the data help control for differences across Housing Units.
- Merge all five data files using the CONTROL variable.
- Keep only those housing units that have data on FMR for all five
-years.
+## 1. Business Problem Overview
 
-## Analysis Process
-Import data
-the data is downloaded from “Housing Affordability Data System” of the U.S. Department of
-Housing and Urban Development. [HADS] : 'https://www.huduser.gov/portal/datasets/hads/hads.html' for years 2005, 2007, 2009, 20011 and 2013.
+### 1.1 Objective
+The objective of this study is to analyze trends in the housing market, focusing on the variation in market rents, housing unit values, and predictive modeling for future trends. The uses historical housing data to provide insights on market dynamics over time, with the aim to inform policy decisions and market strategies.
 
- Housing-level variables include,
-̶ Number of rooms in the housing unit.
-̶ The year it was built.
-̶ Occupied or vacant, Rented or Owned
-̶ Single family or multi-family structure.
-̶ Number of units in the building.
-̶ Market value, Housing costs.
-̶ Number of people living, Household income.
-̶ Type of residential area.
- Data made available every two years. 
+### 1.2 Scope and Data Description
+The datasets are collected from the **Housing Affordability Data System (HADS)** provided by the U.S. Department of Housing and Urban Development. The dataset includes five key years (2005, 2007, 2009, 2011, and 2013) with each file containing data for two years. Key housing-related variables include market value, rent prices, household income, number of rooms, and occupancy status, among others.
 
-Data preprocessing
-- Reduce number of variables 
-# List of Variables in the Data to be used in Capstone
+---
+
+## 2. Problem Statement
+
+### 2.1 Market Rent Analysis Across Years
+This study examines the differences in market rents over the years to understand how housing affordability has evolved. By analyzing the **Fair Market Rent (FMR)** for different years, we aim to uncover trends and patterns that impact housing affordability.
+
+### 2.2 Hypothesis Testing for Market Value Differences
+We will conduct hypothesis tests to determine if there are statistically significant differences in market values across various years, particularly focusing on occupied versus vacant housing units. This is done through **t-tests** to compare market values between two groups.
+
+### 2.3 Predicting Housing Market Values Using Regression
+A regression model will be used to predict housing market values for the year 2013, based on a set of independent variables such as location, size, and type of structure. This will allow us to understand the factors that drive housing market prices.
+
+### 2.4 Forecasting Future Housing Values Using Regression
+Lastly, we aim to forecast housing values for the upcoming years using the same regression techniques, adjusting for potential market changes.
+
+---
+
+## 3. Data Collection and Preprocessing
+
+### 3.1 Data Sources
+The data used in this analysis is collected from the **Housing Affordability Data System** (HADS) provided by HUD. The dataset contains housing-level variables collected across multiple years (2005, 2007, 2009, 2011, and 2013) from the **Housing Affordability Data System** (HADS).  
+
+Link dataset: [US Housing values data](https://www.huduser.gov/portal/datasets/hads/hads.html)
+
+### 3.2 Variables and Descriptions
+List of variables using in this project.  
+
 
 | **Variable Name** | **Type** | **Explanation** |
 |-------------------|----------|-----------------|
@@ -64,57 +108,48 @@ Data preprocessing
 | **COST12** | Numerical ($) | Monthly mortgage payments assuming 12% interest. This applies only to “Owners”. |
 | **COSTMED** | Numerical ($) | Monthly mortgage payments assuming median interest. This applies only to “Owners”. |
 | **ASSISTED** | Numerical | Did the housing unit receive some governmental ‘assistance’? <br> 0 - Not assisted <br> 1 - Assisted <br> -9 - Not Known. |
-Data Cleaning
-- Data Errors: Remove values that is negative or value that very small below $1000
-Housing units do the data files for the year 2005, 2007, 2009, 2011 and 2013 contain afteing delete housing units that have a market value of less than 1000 are 30514,27785,
-31317, 85050 and 36675 respectively .   
 
-Data Analysis
-1. Differences in market values between occupied and vacant housing units
-Using Descriptive Statistics tool in Excel to assess the five datasets to evaluate the difference in values across years.
-housing units are “Occupied” versus “not occupied”
-across various years?
 
-Number of housing that  are occcupied and vacant across years.
+### 3.3 Data Cleaning
+- Data Errors: Remove entries with values suspected to be erroneous, specifically those below $1,000 USD.
+- Housing units entries for the year 2005, 2007, 2009, 2011 and 2013 after deleting suspicous entries are 30514,27785, 31317, 85050 and 36675 respectively.   
 
-2005:  29440 Vs 1074
+### 3.4 Data Merging
 
-2007:  26466 Vs 1319
+**Power Query** was used to import and transform five CSV files. Unnecessary columns were removed, leaving 27 relevant columns for analysis. Values under $1000 were filtered and cleaned. The cleaned data was then merged into a single workbook for further analysis.  
 
-2009:  30081 Vs 1236
+---
 
-2011:  82078 Vs 2972
+## 4. Methodology
 
-2013: 35418 Vs 1257
+### 4.1 Hypothesis Testing for Market Value Differences
 
-Investigate whether there is a difference in market values of occupied versus not occupied housing units across various years using a difference in means hypothesis test across the two sets of values (occupied versus unoccupied). 
+#### 4.1.1 Market values differences between occupied and vacant housing units
+Data pre-processing: Using column `STATUS` which display the occupied('1') and vacant status ('3')
+Analysis steps:  
+- Create a pivot table each year which column is the variable `STATUS` and row is the variable `CONTROL` (unique housing id) and value is the variable `VALUE` of the housing units.  
+- Then I used Data Analysis Tool to perform the hypothesis test for this analysis.
 
-Hypothesis testing: 
-H0: µOccupied - µNot-Occupied =  0
-HA: µOccupied - µNot-Occupied ≠  0   
+The hypothesis test used in this analysis is a **Two-Sample t-Test Assuming Equal Variances (Two-Tailed)**:
 
-Example for year 2005:
-### Analysis of Market Values for Occupied vs. Vacant Housing Units (2005-2013)
+- ___Null hypothesis: H0: µOccupied - µNot-Occupied =  0___
+- ___Alternative hpothesis: HA: µOccupied - µNot-Occupied ≠  0___
 
-#### Descriptive Statistics
+Firstly, I perform Descriptive Statistical Analysis on five sheets for Occupied and Vacant Housing Units.
+Secondly, I performed the two sample equal t-test for each year.
 
-| **Statistic**       | **Occupied Housing Units**  | **Vacant Housing Units**  |
-|---------------------|-----------------------------|---------------------------|
-| **Mean**            | 248,606.39                  | 239,377.81                |
-| **Standard Error**  | 1,858.24                    | 11,268.02                 |
-| **Median**          | 160,000                     | 155,500                   |
-| **Mode**            | 200,000                     | 1,540,794                 |
-| **Standard Deviation** | 279,310.94               | 264,738.45                |
-| **Sample Variance** | 78,014,599,887              | 70,086,448,330            |
-| **Kurtosis**        | 11.17                       | 12.52                     |
-| **Skewness**        | 3.10                        | 3.20                      |
-| **Range**           | 1,539,794                   | 1,538,294                 |
-| **Minimum**         | 1,000                       | 2,500                     |
-| **Maximum**         | 1,540,794                   | 1,540,794                 |
-| **Sum**             | 5,616,764,132               | 132,136,553               |
-| **Count**           | 22,593                       | 552                       |
+__Housing Occupancy and Vacancy Data Across Years__  
 
-#### T-Test: Two-Sample Assuming Equal Variances
+| Year | Occupied Housing | Vacant Housing |
+|------|------------------|----------------|
+| 2005 | 29,440           | 1,074          |
+| 2007 | 26,466           | 1,319          |
+| 2009 | 30,081           | 1,236          |
+| 2011 | 82,078           | 2,972          |
+| 2013 | 35,418           | 1,257          |
+
+
+__The sample output for year 2005 as below__  
 
 | **Statistic**         | **Value**             |
 |-----------------------|-----------------------|
@@ -127,43 +162,34 @@ Example for year 2005:
 | **P(T<=t) one-tail**  | 0.221                 |
 | **P(T<=t) two-tail**  | 0.443                 |
 
-#### Conclusion
+**Result:**  
 
-- The **mean market value** for occupied units (248,606.39) is slightly higher than the mean for vacant units (239,377.81). 
-- The **standard deviation** for occupied units is slightly larger (279,310.94 vs. 264,738.45), indicating greater variation in the market values of occupied housing units.
-- The **skewness** and **kurtosis** suggest that both distributions are right-skewed and have high peakedness, particularly in the case of vacant units.
+- The hypothesis test across the five years fails to reject the null hypothesis, indicating that the values for occupied housing units are greater than those for vacant housing units in the US across all five years.
 
-#### T-Test Results
+#### 4.1.2 Market values differences between fair market rent (FMK)
 
-- The **t-statistic** is 0.77, which is smaller than the **critical value** of 1.96 for a two-tailed test, thus I do not reject the null hypothesis that the occupied housing value greater than vacant housing value.
+- Display the top 10 Rows Using VLOOKUP to Combine FMK Across Years
 
-2. Fair market rent off Housing units
+| FMR_2005 | FMR_2007 | FMR_2009 | FMR_2011 | FMR_2013 |
+|----------|----------|----------|----------|----------|
+| 519      | 616      | 685      | 711      | 737      |
+| 600      | 605      | 670      | 673      | 657      |
+| 788      | 807      | 897      | 935      | 988      |
+| 702      | 778      | 743      | 796      | 773      |
+| 546      | 599      | 503      | 531      | 552      |
+| 680      | 757      | 861      | 895      | 949      |
+| 1081     | 956      | 1037     | 1107     | 1239     |
+| 1006     | 1097     | 1156     | 1235     | 1277     |
+| 916      | 900      | 890      | 923      | 993      |
+| 862      | 930      | 973      | 752      | 794      |
 
-Here is the markdown text for your example using VLOOKUP to combine FMK across years:
-
-### Example of 10 Rows Using VLOOKUP to Combine FMK Across Years
-
-| Year/FMR   | FMR_2005 | FMR_2007 | FMR_2009 | FMR_2011 | FMR_2013 |
-|------------|----------|----------|----------|----------|----------|
-| Row 1      | 519      | 616      | 685      | 711      | 737      |
-| Row 2      | 600      | 605      | 670      | 673      | 657      |
-| Row 3      | 788      | 807      | 897      | 935      | 988      |
-| Row 4      | 702      | 778      | 743      | 796      | 773      |
-| Row 5      | 546      | 599      | 503      | 531      | 552      |
-| Row 6      | 680      | 757      | 861      | 895      | 949      |
-| Row 7      | 1081     | 956      | 1037     | 1107     | 1239     |
-| Row 8      | 1006     | 1097     | 1156     | 1235     | 1277     |
-| Row 9      | 916      | 900      | 890      | 923      | 993      |
-| Row 10     | 862      | 930      | 973      | 752      | 794      |
-
-#### Formula to Combine FMK Values for Row 1:
+Formula sample as below:  
 ```
 =VLOOKUP($A2, thads2005!$A:$G, 7, FALSE)
 ```
 This formula combines the FMK values for each year using VLOOKUP, where `$A2` refers to the row identifier for each year, and `thads2005!$A:$G` is the data range in the 2005 sheet.
-```
 
-### FMR Data Summary by Year
+Firstly, I performaned Descriptive Statistic Analysis for five years  
 
 | **Statistic**       | **2005**   | **2007**   | **2009**   | **2011**   | **2013**   |
 |---------------------|------------|------------|------------|------------|------------|
@@ -181,47 +207,17 @@ This formula combines the FMK values for each year using VLOOKUP, where `$A2` re
 | **Sum**             | 24,501,566 | 25,786,724 | 28,057,338 | 29,442,330 | 30,370,333 |
 | **Count**           | 26,373     | 26,373     | 26,373     | 26,373     | 26,373     |
 
-This table summarizes the key statistics for the FMR (Fair Market Rent) data from 2005 to 2013.
-### Paired t-Test Results: FMR Comparison Between Years
- Null hypothesis for this analysis as follow:
-  H0: FMR2007 - FMR2005 ≥  0 
-  H0: FMR2009 - FMR2007 ≥  0 
-    H0: FMR2011 - FMR2009 ≥  0 
-    H0: FMR2013 - FMR2011 ≥  0 
+This table summarizes the key statistics for the Fair Market Rent (FMR) data from 2005 to 2013. At a glance, the results show a significant increase in the mean, mode, and median values in 2009 compared to previous years.  
 
-#### 1. **2009 vs 2007 FMR Comparison**
+I used Paired t-Test hypothesis for this analysis
+ Null hypothesis for this analysis as follow:  
 
-| **Statistic**                | **FMR 2009**        | **FMR 2007**        |
-|------------------------------|---------------------|---------------------|
-| **Mean**                     | 1063.87             | 977.77              |
-| **Variance**                 | 134,955.84          | 113,606.38          |
-| **Observations**             | 26,373              | 26,373              |
-| **Pearson Correlation**      | 0.9526              |                     |
-| **Hypothesized Mean Difference** | 0               |                     |
-| **Degrees of Freedom (df)** | 26,372              |                     |
-| **t Stat**                   | 124.32              |                     |
-| **p-value (one-tail)**       | 0                   |                     |
-| **t Critical (one-tail)**    | 1.645               |                     |
-| **p-value (two-tail)**       | 0                   |                     |
-| **t Critical (two-tail)**    | 1.960               |                     |
+   ___H0: FMR2007 - FMR2005 ≥  0___   
+   ___H0: FMR2009 - FMR2007 ≥  0___  
+   ___H0: FMR2011 - FMR2009 ≥  0___  
+   ___H0: FMR2013 - FMR2011 ≥  0___  
 
-#### 2. **2013 vs 2011 FMR Comparison**
-
-| **Statistic**                | **FMR 2013**        | **FMR 2011**        |
-|------------------------------|---------------------|---------------------|
-| **Mean**                     | 1151.57             | 1116.38             |
-| **Variance**                 | 155,443.11          | 157,373.27          |
-| **Observations**             | 26,373              | 26,373              |
-| **Pearson Correlation**      | 0.9692              |                     |
-| **Hypothesized Mean Difference** | 0               |                     |
-| **Degrees of Freedom (df)** | 26,372              |                     |
-| **t Stat**                   | 58.21               |                     |
-| **p-value (one-tail)**       | 0                   |                     |
-| **t Critical (one-tail)**    | 1.645               |                     |
-| **p-value (two-tail)**       | 0                   |                     |
-| **t Critical (two-tail)**    | 1.960               |                     |
-
-#### 3. **2007 vs 2005 FMR Comparison**
+#### **2007 vs 2005 FMR Comparison**
 
 | **Statistic**                | **FMR 2007**        | **FMR 2005**        |
 |------------------------------|---------------------|---------------------|
@@ -237,7 +233,23 @@ This table summarizes the key statistics for the FMR (Fair Market Rent) data fro
 | **p-value (two-tail)**       | 0                   |                     |
 | **t Critical (two-tail)**    | 1.960               |                     |
 
-#### 4. **2011 vs 2009 FMR Comparison**
+#### **2009 vs 2007 FMR Comparison**
+
+| **Statistic**                | **FMR 2009**        | **FMR 2007**        |
+|------------------------------|---------------------|---------------------|
+| **Mean**                     | 1063.87             | 977.77              |
+| **Variance**                 | 134,955.84          | 113,606.38          |
+| **Observations**             | 26,373              | 26,373              |
+| **Pearson Correlation**      | 0.9526              |                     |
+| **Hypothesized Mean Difference** | 0               |                     |
+| **Degrees of Freedom (df)** | 26,372              |                     |
+| **t Stat**                   | 124.32              |                     |
+| **p-value (one-tail)**       | 0                   |                     |
+| **t Critical (one-tail)**    | 1.645               |                     |
+| **p-value (two-tail)**       | 0                   |                     |
+| **t Critical (two-tail)**    | 1.960               |                     |
+
+#### **2011 vs 2009 FMR Comparison**
 
 | **Statistic**                | **FMR 2011**        | **FMR 2009**        |
 |------------------------------|---------------------|---------------------|
@@ -251,42 +263,71 @@ This table summarizes the key statistics for the FMR (Fair Market Rent) data fro
 | **p-value (one-tail)**       | 0                   |                     |
 | **t Critical (one-tail)**    | 1.645               |                     |
 | **p-value (two-tail)**       | 0                   |                     |
+| **t Critical (two-tail)**    | 1.960               |                     |  
+
+
+#### **2013 vs 2011 FMR Comparison**
+
+| **Statistic**                | **FMR 2013**        | **FMR 2011**        |
+|------------------------------|---------------------|---------------------|
+| **Mean**                     | 1151.57             | 1116.38             |
+| **Variance**                 | 155,443.11          | 157,373.27          |
+| **Observations**             | 26,373              | 26,373              |
+| **Pearson Correlation**      | 0.9692              |                     |
+| **Hypothesized Mean Difference** | 0               |                     |
+| **Degrees of Freedom (df)** | 26,372              |                     |
+| **t Stat**                   | 58.21               |                     |
+| **p-value (one-tail)**       | 0                   |                     |
+| **t Critical (one-tail)**    | 1.645               |                     |
+| **p-value (two-tail)**       | 0                   |                     |
 | **t Critical (two-tail)**    | 1.960               |                     |
 
-### Summary of Results
+__Conclusion:__
 
 - **t-Statistic**: In all comparisons, the t-statistics are much higher than the critical values, indicating that the differences between the FMR values for each pair of years are statistically significant.
   
-- **p-values**: All p-values (both one-tailed and two-tailed) are 0, which is far below the usual significance threshold of 0.05, confirming that there are significant differences in FMR values between the compared years.
+- **p-values**: All p-values (both one-tailed and two-tailed) are 0, which is far below the usual significance threshold of 0.05, confirming that there are significant differences in FMR values between the compared years.  
 
-### Conclusion
+Based on the analysis, the Fair Market Rent (FMR) of housing units increased every year, with a significant spike in 2009. This increase is supported by the exceptionally large t-statistic of 124.32, indicating a statistically significant difference.  
 
-Based on the analysis, the fair market rent of housing units increased every year.
+### 4.2 Regression Analysis for Current Housing Market Values for Single Family Units for Year 2013
 
-3. Regression for current market values 
+### **Data Preprocessing:**
 
-4. Regression for future market values
-Data Preprocessing: Choose only the ‘Single Family Units’, that is,
-STRUCTURETYPE = 1 and TYPE = 1 and delete all data on housing units which are rental
-units, OWNRENT = ‘2’
+**Data Filtering:**  
+   Use the `Filter` function to extract only the data where `STRUCTURETYPE = 1` and `TYPE = 1`.  
+   Delete all data related to housing units that are rental (`OWNRENT = '2'`).
 
-After data preprocessing:
- Calculate various descriptive statistics for the VALUE variable.
- Visualize the empirical distribution of VALUE.
- Plot a histogram of VALUE.
- Plot a histogram of Ln(VALUE).
-Which of these two histograms more closely resemble a Bell curve?
- Select your set of independent variables or the X variables. 
+**Handling Suspicious Data:**  
+   For modeling, check variables such as `FMR`, `OTHERCOST`, and `ZINC2` for suspicious negative values.  
+   Remove all suspicious data by using `Sort and Filter`, `Go to Special`, `Find Blank`, and delete all rows with suspicious values.
 
-REGRESSION equation: LN(VALUE)=β0​+β1​⋅Northeast+β2​⋅Midwest+β3​⋅South+β4​⋅LN(LMED)+β5​⋅LN(FMR)+β6​⋅LN(IPOV)+β7​⋅BEDRMS+β8​⋅BUILT+β9​⋅ROOMS+β10​⋅PER+β11​⋅LN(ZINC2)+β12​⋅ADEQUATE+β13​⋅LN(ZSMHC)+β14​⋅LN(UTILITY)+β15​⋅LN(OTHERCOST)
-Note: 'Metro' is a dummy variable = 1 when METRO3 variable is = '1', otherwise it is =0
-Note: 'Northeast', Midwest' and 'South' are dummy variables for the categorical variable REGION
-Note: 'Adequate' is a dummy variable =1 when the categorical variable ZADEQ is ='1', otherwise it is =0
-Note: This regression also takes a logarithmic transformation of many of the 'X' variables
+**Correlation Analysis:**  
+   Use the pairwise correlation method in the Data Analysis Tool to check the correlation between independent and dependent variables in the dataset.  
+   Keep only the variables that show a high correlation (close to 1) for modeling.
 
-### Histogram distribution of VALUE itself and LN(VALUES)
+**Log Transformation:**  
+   Create new log-transformed columns for the following variables: `VALUES`, `LMED`, `FMK`, `IPOV`, `ZINC2`, `ZSMHC`, `UTILITY`, and `OTHERCOST` using the `LN()` function. The main purpose of this transformation is to make the histogram more symmetric, which is expected to improve the R-squared score for the model.
+   
+   Please note that `LN()` can only take positive values and not zero. Therefore, update the formula as follows to handle zeros:  
+   `IF(A1 = 0, LN(1), LN(A1))`.
+
+**Regression Equation** 
+LN(VALUE)=β0​+β1​⋅Northeast+β2​⋅Midwest+β3​⋅South+β4​⋅LN(LMED)+β5​⋅LN(FMR)+β6​⋅LN(IPOV)+β7​⋅BEDRMS+β8​⋅BUILT+β9​⋅ROOMS+β10​⋅PER+β11​⋅LN(ZINC2)+β12​⋅ADEQUATE+β13​⋅LN(ZSMHC)+β14​⋅LN(UTILITY)+β15​⋅LN(OTHERCOST)
+
+**Dummy variable transfromation**  
+
+- I then transfromt the string values into numeric using dummy method.
+
+_Note: 'Metro' is a dummy variable = 1 when `METRO3` variable is = '1', otherwise it is =0.  
+Note: 'Northeast', Midwest' and 'South' are dummy variables for the categorical variable `REGION`.  
+Note: 'Adequate' is a dummy variable =1 when the categorical variable `ZADEQ` is ='1', otherwise it is =0.  
+Note: This regression also takes a logarithmic transformation of many of the 'X' variables_
+
+Histogram distribution of VALUE itself and LN(VALUES) as 
 
 ![alt text](image.png)
+
 
 ### SUMMARY OUTPUT
 
@@ -326,15 +367,16 @@ Note: This regression also takes a logarithmic transformation of many of the 'X'
 | β14 LN(UTILITY)        | -0.03173778    | 0.007476926  | -4.244763433 | 2.19454E-5   | -0.046392852  | -0.017082709  | -0.046392852  | -0.017082709  |
 | β15 LN(OTHERCOST)      | 0.130820037    | 0.00304902   | 42.90560797  | 0            | 0.124843837   | 0.136796237   | 0.124843837   | 0.136796237   |
 
-Summary Report
+
+**Output Interpretations**
 
 A Regression Model for the Market Value of Housing Units (using data for Year 2013).
-Main points to be covered in the summary...
+Main points to be covered in the summary
 a.  We use the model that gives the best R-Square
 b.  Note that the 'Y' variable has a natural logarithm taken and also some of the 'X' variables have a natural logarithm taken. So the interpretations will be either semi-log or the log-log interpretations.
 c.  All p-values are below .05, indicating that all coefficients are statistically significant.
 
-Interpretation of coefficients
+__Interpretation of coefficients__
 - β0: No managerially relevant interpretation, since talking about a situation when all 'X' variables are zero does not make managerial sense.
 - β1, β2: β3: When the housing unit is in the Northeast, Midwest, South region of the country, then the market value tends to be lower by 13.37%, 32.89%, 24.28% respectively as compared to a similar housing unit being in the West region, all other variables being kept at the same level.  
 - β4: For every one percentage increase in the area median income, the market value increases by 0.21%, all other variables remaining at the same level.
@@ -350,29 +392,24 @@ Interpretation of coefficients
 - β14: For every one percentage increase in the monthly utility costs, the market value decreases by 0.03%, all other variables remaining at the same level.
 - β15: For every one percentage increase in the monthly 'other' costs, the market value increases by 0.13%, all other variables remaining at the same level.
 
-Interpretation of R-square
-The R-square and adjusted R-square are about 0.55, indicating that the model explains about 55 percentage of variation in the market value of housing units.
- 
-Discussion of contributing factors for the Market value of Housing Units
-
+__Interpretation of R-square__  
+The R-square and adjusted R-square are about ___0.55___, indicating that the model explains about 55 percentage of variation in the market value of housing units.  
 The results emphasize the multifaceted nature of housing market values, where economic factors (income, rent, poverty) and physical characteristics of the property (size, rooms, year built) all play a critical role in determining market prices.
 
-4. A Regression Model to predict the Market Value of Housing Units in Year 2013.
+### 4.3 Future Market Value Forecasting 
 
- Use the lag of X variables.
- Estimate a regression model using the 2013 VALUE variable and
-the X variables from the 2011 data. Merge the VALUE variable from 2013 data into the 2011 data.
+This model perform the predicted regression model that is using X variables in year 2011 and Y variable in year 2013.
+
+Data pre-processing: I used vlookup to merge the dataset as below.
  (VLOOKUP command using the CONTROL variable to match the data files) 
 ![alt text](image-1.png)
 
- This will allow predictions about future market value of housing units
+Then I seprated the dataset into 2 different random different datsets, one is for training, the other for testing the model after training(contains 1000 radom rows). by doing that, i used `RAND()` function to collect randomly 1000 rows.
 
-
-mean absolute deviation equation:
+After training, I predict the market values for the holdout dataset that the model haven't seen before. Then calculate the mean absolute deviation equation to see how different between actiual values and predicted values.  
 ![alt text](image-2.png)
 
-### REGRESSION 2: 
-**Model**:  
+### REGRESSION EQUATION:  
 LN(VALUE) = β0 + β1⋅Northeast + β2⋅Midwest + β3⋅South + β4⋅LN(LMED) + β5⋅LN(FMR) + β6⋅LN(IPOV) + β7⋅BEDRMS + β8⋅BUILT + β9⋅ROOMS + β10⋅PER + β11⋅LN(ZINC2) + β12⋅ADEQUATE + β13⋅LN(ZSMHC) + β14⋅LN(UTILITY) + β15⋅LN(OTHERCOST)
 
 **Notes**:  
@@ -420,7 +457,6 @@ LN(VALUE) = β0 + β1⋅Northeast + β2⋅Midwest + β3⋅South + β4⋅LN(LMED)
 | β15 LN(OTHERCOST)      | 0.130820037    | 0.00304902   | 42.90560797  | 0            | 0.124843837   | 0.136796237   | 0.124843837   | 0.136796237   |
 
 
-
 ### Example of Specific Rows from the Data:
 
 | VALUE_2013 | LN(VALUE_2013) | Northeast | Midwest | South | LN(LMED) | LN(FMR) | LN(IPOV) | BEDRMS | BUILT | ROOMS | PER | LN(ZINC2) | ADEQUATE | LN(ZSMHC) | LN(UTILITY) | LN(OTHER COST) | VALUE_2011 | LN(VALUE_2011) | Predicted Ln(VALUE 2013) | Predicted (VALUE 2013) | Abs(Difference) | Mean Abs(Diff) [MAD] | AVERAGE |
@@ -431,81 +467,25 @@ LN(VALUE) = β0 + β1⋅Northeast + β2⋅Midwest + β3⋅South + β4⋅LN(LMED)
 | 50000      | 10.81977828    | 0         | 1       | 0     | 11.0716259  | 6.826545224 | 9.275003885 | 3      | 1970  | 5     | 1   | 9.727883383 | 1        | 6.886531643 | 5.673323267 | 3.149882953 | 75000      | 11.22524339     | 11.67332742               | 117398.2664          | 42398.26639      |                       |         |
 | 250000     | 12.4292162     | 1         | 0       | 0     | 11.28139686 | 6.913737351 | 9.605687802 | 2      | 1950  | 4     | 2   | 11.39618938 | 1        | 7.83991936  | 6.027474985 | 4.422848629 | 250000     | 12.4292162      | 12.13204556               | 185729.3086          | 64270.69143      |                       |         |
 
-### Key Observations:
+**Output interpretations**
 
-- **Predicted vs. Actual Values**: The natural logarithms of the actual housing values in 2013 (`LN(VALUE_2013)`) are predicted using the regression model. The model then exponentiates the predicted logarithmic values to derive the actual predicted housing values (`Predicted (VALUE 2013)`).
+The regression model now has a R-square of 0.46 since it was used independent variables in year 2011 and depedence variable in year 2013. 
 
-- **Abs(Difference)**: The **absolute difference** between the actual and predicted housing values for 2013 is computed. This value helps to gauge how close the model's predictions are to the real-world data.
+Using the coefficients from this regression model and using the set of 'X' variables in the hold out data we make predictions of the Market Value for the 1000 housing units held out. The MAD statistic (Mean Absolute Deviation) for the prediction turns out to be $88,688.53. This seems acceptable given that the average Market Value is around  $209,596.59.
 
-- **Mean Abs(Diff) [MAD]**: The **Mean Absolute Difference** (MAD) is calculated to provide an overall measure of prediction accuracy. A lower MAD indicates a more accurate prediction model, with values closer to actual values.
+---
 
-### Model Performance Insights:
+## 5. Conclusion and Recommedations
 
-The data table allows comparison between the actual housing values in 2013 and those predicted by the regression model. By assessing the absolute differences and the MAD, one can determine the accuracy of the model's predictions and the potential for improvement.
+### 5.1 Key Findings
+The study found that market rents and housing values have consistently increased over the years. There are significant differences in market values between occupied and vacant units, with occupied units typically having higher market values.
 
-This dataset is useful for evaluating predictive models in housing economics and can help refine strategies for more accurate real-estate forecasting.
+### 5.2 Policy Implications
+The increasing trend in housing rents may indicate a growing affordability issue for lower-income households. Policymakers should consider interventions to control rent inflation and increase housing accessibility.
 
-Summary Report
+### 5.3 Recommendations for Stakeholders
+- **Real Estate Investors**: Focus on areas with high growth in market values and rents.
+- **Government Agencies**: Implement rent controls and affordable housing programs to address increasing rent pressures.
+- **Homebuyers**: Consider long-term market trends and potential appreciation when purchasing properties.
 
-(Please include a summary of your key findings here)
-
-
-
-A Regression Model to predict the Market Value of Housing Units in Year 2013.
-
-Main points to be covered in the summary...
-
-a.  We use the same model from Assignment 3, except that the dependent variable is the 2013 Market Value while the independent variables are from the year 2011.
-b.  We could also use an additional independent variable which is the Market Value of the housing unit in year 2011.
-c.  We need to hold out 1000 housing units from the data and estimate the regression model on remaining data.
-d. The coefficients from the regression model are to be then used to predict the Market Value in the 'Hold-out Data'. 
-c. As a metric of prediction, we need to calculate the Mean Absolute Deviation (MAD) for our predictions.
-
-Prediction in the 'Hold-out' Data
-
-The regression model now has a R-square of 0.46 since we added the Market Value for year 2011 as an additional 'X' variable.
-
-Using the coefficients from this regression model and using the set of 'X' variables in the hold out data we make predictions of the Market Value for the 1000 housing units held out. The MAD statistic (Mean Absolute Deviation) for the prediction turns out to be $88,688.53. This seems ok given that the average Market Value is around  $209,596.59.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+This analysis provides valuable insights into housing market trends and offers actionable recommendations for both market participants and policymakers.
