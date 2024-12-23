@@ -4,18 +4,17 @@
 
 1. **[Business Problem Overview](#1-business-problem-overview)**  
    - **[1.1 Objective](#11-objective)**  
-   - **[1.2 Scope and Data Description](#12-scope-and-data-description)**  
-   - **[1.3 Problem Statement](#13-problem-statement)**
+   - **[1.2 Problem Statement](#12-problem-statement)**
 2. **[Data Collection and Preprocessing](#3-data-collection-and-preprocessing)**  
    - **[2.1 Data Sources](#21-data-sources)**  
-   - **[2.2 Variables and Descriptions](#22-variables-and-descriptions)**  
+   - **[2.2 Columns Definition](#22-columns-definition)**  
    - **[2.3 Data Cleaning](#23-data-cleaning)**  
-   - **[2.4 Data Merging](#24-data-merging)**  
+   - **[2.4 Data Integration](#24-data-integration)**  
 
 3. **[Methodology](#3-methodology)**  
    - **[3.1 Hypothesis Testing for Market Value Differences](#31-hypothesis-testing-for-market-value-differences-methodology)**  
-         **[3.1.1. Market values differences between occupied and vacant housing units](#311-market-values-differences-between-occupied-and-vacant-housing-units)**    
-         **[3.1.2 Market values differences between fair market rent (FMK)](#312-market-values-differences-between-fair-market-rent-fmk)**   
+        - **[3.1.1. Market values differences between occupied and vacant housing units](#311-market-values-differences-between-occupied-and-vacant-housing-units)**    
+        - **[3.1.2 Market values differences between fair market rent (FMK)](#312-market-values-differences-between-fair-market-rent-fmk)**   
          
    - **[3.2 Regression Analysis for Current Housing Market Values for Single Family Units for Year 2013](#32-regression-analysis-for-current-housing-market-values-for-single-family-units-for-year-2013)**
    - **[3.3 Future Market Value Forecasting](#33-future-market-value-forecasting)** 
@@ -30,12 +29,11 @@
 ## 1. Business Problem Overview
 
 ### 1.1 Objective
-Analyze trends in the housing market, with a particular focus on variations in market values, occupancy status, fair market rents, and single-family homes. Using historical housing data, the project aims to provide insights into market dynamics over time. The goal is to identify the most important variables that influence housing prices and to develop a regression model that can predict current and future housing market values in the United States.
 
-### 1.2 Scope and Data Description
-The datasets are collected from the **Housing Affordability Data System (HADS)** provided by the U.S. Department of Housing and Urban Development. The dataset includes five key years (2005, 2007, 2009, 2011, and 2013) with each file containing data for two years. Key housing-related variables include market value, rent prices, household income, number of rooms, and occupancy status.
+The objective of this project is to analyze trends in the U.S. housing market from 2005 to 2013, focusing on identifying the key factors that influence housing values during this period. The analysis aims to uncover variables such as occupancy status, fair market rents, and other economic factors that impact housing market prices. The primary tool for this analysis is `Excel`, where data will be cleaned, manipulated, and examined using various statistical methods. 
+A regression model will then be developed using selected independent variables to predict housing market prices for 2013. The model will be extended to include additional independent variables from 2011 and dependent variable from 2013 to forecast housing prices for the following year. The model's performance will be evaluated using R-squared to assess its accuracy, and further refinement and development will be conducted to improve its predictive power over time.  
 
-### 1.3 Problem Statement
+### 1.2 Problem Statement
 
 - Analyze the differences in housing market values between occupied and vacant housing units across five years.
 - Perform a paired t-test comparison to examine how market rents (`FMK` variable) have varied over the past five years.
@@ -45,13 +43,14 @@ The datasets are collected from the **Housing Affordability Data System (HADS)**
 ## 2. Data Collection and Preprocessing
 
 ### 2.1 Data Sources
+
 The data used in this analysis is collected from the **Housing Affordability Data System** (HADS) provided by HUD. The dataset contains housing-level variables collected across multiple years (2005, 2007, 2009, 2011, and 2013) from the **Housing Affordability Data System** (HADS).  
 
 Link dataset: [US Housing values data](https://www.huduser.gov/portal/datasets/hads/hads.html)
 
-### 2.2 Variables and Descriptions
-List of variables using in this project.  
-
+### 2.2 Columns Definition
+  
+Utilizing the total of 27 variables for this analysis, the detailed columns definition as below  
 
 | **Variable Name** | **Type** | **Explanation** |
 |-------------------|----------|-----------------|
@@ -88,7 +87,7 @@ List of variables using in this project.
 - Data Errors: Remove entries with values suspected to be erroneous, specifically those below $1,000 USD.
 - Housing units entries for the year 2005, 2007, 2009, 2011 and 2013 after deleting suspicous entries are 30514,27785, 31317, 85050 and 36675 respectively.   
 
-### 2.4 Data Merging
+### 2.4 Data Integration  
 
 **Power Query** was used to import and transform five CSV files. Unnecessary columns were removed, leaving 27 relevant columns for analysis. Values under $1000 were filtered and cleaned. The cleaned data was then merged into a single workbook for further analysis.  
 
