@@ -141,7 +141,14 @@ __The sample output for year 2005 as below__
 
 #### 3.1.2 Market values differences between fair market rent (FMK)
 
-- Display the top 10 Rows Using VLOOKUP to Combine FMK Across Years
+- I used the unique CONTROL variable, which represents the housing ID, and applied the VLOOKUP function to retrieve the corresponding FMK values from the years 2005 to 2013. Afterward, I removed any records where the FMK value was missing in any of those years.
+- Sample formula:  
+```
+=VLOOKUP($A2, thads2005!$A:$G, 7, FALSE)
+```  
+This formula combines the FMK values for each year using VLOOKUP, where `$A2` refers to the row identifier for each year, and `thads2005!$A:$G` is the data range in the 2005 sheet.  
+
+Displaying the top 10 rows of the combined and cleaned dataset for FMK:  
 
 | FMR_2005 | FMR_2007 | FMR_2009 | FMR_2011 | FMR_2013 |
 |----------|----------|----------|----------|----------|
@@ -156,13 +163,8 @@ __The sample output for year 2005 as below__
 | 916      | 900      | 890      | 923      | 993      |
 | 862      | 930      | 973      | 752      | 794      |
 
-Formula sample as below:  
-```
-=VLOOKUP($A2, thads2005!$A:$G, 7, FALSE)
-```
-This formula combines the FMK values for each year using VLOOKUP, where `$A2` refers to the row identifier for each year, and `thads2005!$A:$G` is the data range in the 2005 sheet.
 
-Descriptive Statistic of FMK values for 5 years  
+__Descriptive Statistic of FMK values for 5 years__ 
 
 | **Statistic**       | **2005**   | **2007**   | **2009**   | **2011**   | **2013**   |
 |---------------------|------------|------------|------------|------------|------------|
