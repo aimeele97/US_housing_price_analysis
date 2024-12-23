@@ -28,7 +28,7 @@ Here is the table of contents for the README, formatted with relative navigation
 
 4. **[Methodology](#4-methodology)**  
    - **[4.1 Hypothesis Testing for Market Value Differences](#41-hypothesis-testing-for-market-value-differences-methodology)**  
-         - **[4.1.1 Market values differences between occupied and vacant housing units](#411-market-values-differences-between-occupied-and-vacant-housing-units)**    
+         - **[4.1.1. Market values differences between occupied and vacant housing units](#411-market-values-differences-between-occupied-and-vacant-housing-units)**    
          - **[4.1.2 Market values differences between fair market rent (FMK)](#412-market-values-differences-between-fair-market-rent-fmk)**   
          
    - **[4.2 Regression Analysis for Current Housing Market Values for Single Family Units for Year 2013](#42-regression-analysis-for-current-housing-market-values-for-single-family-units-for-year-2013)**
@@ -45,28 +45,17 @@ Here is the table of contents for the README, formatted with relative navigation
 ## 1. Business Problem Overview
 
 ### 1.1 Objective
-The objective of this study is to analyze trends in the housing market, focusing on the variation in market rents, housing unit values, and predictive modeling for future trends. The uses historical housing data to provide insights on market dynamics over time, with the aim to inform policy decisions and market strategies.
+Analyze trends in the housing market, with a particular focus on variations in market values, occupancy status, fair market rents, and single-family homes. Using historical housing data, the project aims to provide insights into market dynamics over time. The goal is to identify the most important variables that influence housing prices and to develop a regression model that can predict current and future housing market values in the United States.
 
 ### 1.2 Scope and Data Description
-The datasets are collected from the **Housing Affordability Data System (HADS)** provided by the U.S. Department of Housing and Urban Development. The dataset includes five key years (2005, 2007, 2009, 2011, and 2013) with each file containing data for two years. Key housing-related variables include market value, rent prices, household income, number of rooms, and occupancy status, among others.
+The datasets are collected from the **Housing Affordability Data System (HADS)** provided by the U.S. Department of Housing and Urban Development. The dataset includes five key years (2005, 2007, 2009, 2011, and 2013) with each file containing data for two years. Key housing-related variables include market value, rent prices, household income, number of rooms, and occupancy status.
 
----
+### 1.3 Problem Statement
 
-## 2. Problem Statement
-
-### 2.1 Market Rent Analysis Across Years
-This study examines the differences in market rents over the years to understand how housing affordability has evolved. By analyzing the **Fair Market Rent (FMR)** for different years, we aim to uncover trends and patterns that impact housing affordability.
-
-### 2.2 Hypothesis Testing for Market Value Differences
-We will conduct hypothesis tests to determine if there are statistically significant differences in market values across various years, particularly focusing on occupied versus vacant housing units. This is done through **t-tests** to compare market values between two groups.
-
-### 2.3 Predicting Housing Market Values Using Regression
-A regression model will be used to predict housing market values for the year 2013, based on a set of independent variables such as location, size, and type of structure. This will allow us to understand the factors that drive housing market prices.
-
-### 2.4 Forecasting Future Housing Values Using Regression
-Lastly, we aim to forecast housing values for the upcoming years using the same regression techniques, adjusting for potential market changes.
-
----
+- Analyze the differences in housing market values between occupied and vacant housing units across five years.
+- Perform a paired t-test comparison to examine how market rents (`FMK` variable) have varied over the past five years.
+- Train a regression model to predict the housing market values for the year 2013.
+- Develop a separate model to forecast housing market values for the following year (2014).
 
 ## 3. Data Collection and Preprocessing
 
