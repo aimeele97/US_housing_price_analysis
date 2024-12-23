@@ -375,13 +375,13 @@ This model perform the predicted regression model that is using X variables in y
 
 Data pre-processing: I used vlookup to merge the dataset together, sample syntax as follows:  
 
-![alt text](image-1.png)
+![alt text](image-1.png)  
 
-Then I seprated the dataset into 2 different random different datsets, one is for training, the other for testing the model after training(contains 1000 radom rows). by doing that, i used `RAND()` function to collect randomly 1000 rows.
+I then separated the dataset into two random subsets: one for training the model and the other for testing the model after training. The testing set contains 1,000 randomly selected rows, which I created using the RAND() function to randomly sample the data.  
 
-After training, I predict the market values for the holdout dataset that the model haven't seen before. Then calculate the mean absolute deviation equation to see how different between actiual values and predicted values. 
-  
-![alt text](image-2.png)
+After training the model, I used it to predict market values for the holdout dataset (the test set), which the model had not seen during training. To evaluate the model's performance, I calculated the Mean Absolute Deviation (MAD), which measures the difference between the actual and predicted values. This allowed me to assess the accuracy of the model's predictions. The formula I used to calculate the MAD as follows:   
+
+![alt text](image-2.png)  
 
 ### REGRESSION EQUATION:  
 LN(VALUE) = β0 + β1⋅Northeast + β2⋅Midwest + β3⋅South + β4⋅LN(LMED) + β5⋅LN(FMR) + β6⋅LN(IPOV) + β7⋅BEDRMS + β8⋅BUILT + β9⋅ROOMS + β10⋅PER + β11⋅LN(ZINC2) + β12⋅ADEQUATE + β13⋅LN(ZSMHC) + β14⋅LN(UTILITY) + β15⋅LN(OTHERCOST)
