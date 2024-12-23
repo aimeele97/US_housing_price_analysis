@@ -480,13 +480,7 @@ The findings from this analysis have several important policy implications for h
 
 ### **4.3 Recommendations for Stakeholders**
 
-Based on the findings of this study, the following recommendations are made for stakeholders in the housing market:
-
-- **Real Estate Professionals:**  
-  Real estate agents, investors, and developers should be aware of the trends in occupancy and market rents. The analysis suggests that properties with higher occupancy rates tend to have higher market values. Investors could focus on areas with higher occupancy rates or identify strategies to reduce vacancy rates, which could lead to higher returns.
-
-- **Government and Policymakers:**  
-  Given the role that economic events like recessions play in affecting housing markets, policymakers should consider enacting safeguards to mitigate the negative impacts of such shocks. This could include expanding affordable housing programs, rent control policies, or targeted financial support for renters and homeowners during times of economic uncertainty. Additionally, policies that encourage homeownership could help stabilize markets, especially in regions with high vacancy rates.
+For improving the housing market values regression model, the key recommendation is to incorporate more relevant independent variables, especially if the person has deeper domain knowledge in the housing industry. The initial model serves as a foundational blueprint for future improvements. By integrating additional factors—such as economic indicators, neighborhood characteristics, government policies, and broader market trends—the model's predictive accuracy can be significantly enhanced. The more accurate the model becomes, the better it will serve policymakers and other relevant stakeholders, enabling them to make more informed decisions and drive economic outcomes to a higher level. Continuous refinement of the model, with updated data and advanced techniques, will ensure its ongoing relevance and effectiveness in forecasting housing market trends.  
 
 ---
 
