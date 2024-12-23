@@ -28,8 +28,8 @@ Here is the table of contents for the README, formatted with relative navigation
 
 4. **[Methodology](#4-methodology)**  
    - **[4.1 Hypothesis Testing for Market Value Differences](#41-hypothesis-testing-for-market-value-differences-methodology)**  
-         **[4.1.1 Market values differences between occupied and vacant housing units](#411-market-values-differences-between-occupied-and-vacant-housing-units)** 
-         **[4.1.2 Market values differences between fair market rent (FMK)](#412-market-values-differences-between-fair-market-rent-fmk)**
+         - **[4.1.1 Market values differences between occupied and vacant housing units](#411-market-values-differences-between-occupied-and-vacant-housing-units)**    
+         - **[4.1.2 Market values differences between fair market rent (FMK)](#412-market-values-differences-between-fair-market-rent-fmk)**   
          
    - **[4.2 Regression Analysis for Current Housing Market Values for Single Family Units for Year 2013](#42-regression-analysis-for-current-housing-market-values-for-single-family-units-for-year-2013)**
    - **[4.3 Future Market Value Forecasting](#43-future-market-value-forecasting)** 
