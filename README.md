@@ -8,8 +8,6 @@ Here is the table of contents for the README, formatted with relative navigation
 
 ## **Table of Contents**
 
-## **Table of Contents**
-
 1. **[Business Problem Overview](#1-business-problem-overview)**  
    - **[1.1 Objective](#11-objective)**  
    - **[1.2 Scope and Data Description](#12-scope-and-data-description)**  
