@@ -162,7 +162,7 @@ Formula sample as below:
 ```
 This formula combines the FMK values for each year using VLOOKUP, where `$A2` refers to the row identifier for each year, and `thads2005!$A:$G` is the data range in the 2005 sheet.
 
-Firstly, I performaned Descriptive Statistic Analysis for five years  
+Descriptive Statistic of FMK values for 5 years  
 
 | **Statistic**       | **2005**   | **2007**   | **2009**   | **2011**   | **2013**   |
 |---------------------|------------|------------|------------|------------|------------|
