@@ -137,7 +137,7 @@ __The sample output for year 2005 as below__
 
 **Result:**  
 
-- The hypothesis test across the five years fails to reject the null hypothesis, indicating that the values for occupied housing units are greater than those for vacant housing units in the US across all five years.
+- After performing hypothesis testing for all five years, the null hypothesis could not be rejected in any case. For example, in 2005, the t-statistic was 0.77, which falls between the critical values of -1.96 and 1.96 (the t-cutoff). Since the t-statistic does not fall into the rejection region, this indicates that there is insufficient evidence to conclude that there is a significant difference between the values for occupied housing units and vacant housing units in the US. This pattern was consistent across all five years, suggesting that the values for occupied housing units were generally greater than those for vacant housing units during the observed period.  
 
 #### 3.1.2 Market values differences between fair market rent (FMK)
 
@@ -180,7 +180,7 @@ Descriptive Statistic of FMK values for 5 years
 | **Sum**             | 24,501,566 | 25,786,724 | 28,057,338 | 29,442,330 | 30,370,333 |
 | **Count**           | 26,373     | 26,373     | 26,373     | 26,373     | 26,373     |
 
-This table summarizes the key statistics for the Fair Market Rent (FMR) data from 2005 to 2013. At a glance, the results show a significant increase in the mean, mode, and median values in 2009 compared to previous years.  
+This table summarizes the key statistics for the Fair Market Rent (FMR) data from 2005 to 2013. At a glance, the results show a significant increase in the mean, mode, and median values in 2009 compared to previous years. 
 
 I used Paired t-Test hypothesis for this analysis
  Null hypothesis for this analysis as follow:  
