@@ -38,7 +38,7 @@ A regression model will then be developed using selected independent variables t
 - Analyze the differences in housing market values between occupied and vacant housing units across five years.
 - Perform a paired t-test comparison to examine how market rents (`FMK` variable) have varied over the past five years.
 - Train a regression model to predict the housing market values for the year 2013.
-- Develop a separate model to forecast housing market values for the following year (2014).
+- Develop a separate model to forecast housing market values for the following year.
 
 ## 2. Data Collection and Preprocessing
 
