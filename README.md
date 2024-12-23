@@ -13,32 +13,25 @@ Here is the table of contents for the README, formatted with relative navigation
 1. **[Business Problem Overview](#1-business-problem-overview)**  
    - **[1.1 Objective](#11-objective)**  
    - **[1.2 Scope and Data Description](#12-scope-and-data-description)**  
+   - **[1.3 Problem Statement](#13-problem-statement)**
+2. **[Data Collection and Preprocessing](#3-data-collection-and-preprocessing)**  
+   - **[2.1 Data Sources](#21-data-sources)**  
+   - **[2.2 Variables and Descriptions](#22-variables-and-descriptions)**  
+   - **[2.3 Data Cleaning](#23-data-cleaning)**  
+   - **[2.4 Data Merging](#24-data-merging)**  
 
-2. **[Problem Statement](#2-problem-statement)**  
-   - **[2.1 Market Rent Analysis Across Years](#21-market-rent-analysis-across-years)**  
-   - **[2.2 Hypothesis Testing for Market Value Differences](#22-hypothesis-testing-for-market-value-differences)**  
-   - **[2.3 Predicting Housing Market Values Using Regression](#23-predicting-housing-market-values-using-regression)**  
-   - **[2.4 Forecasting Future Housing Values Using Regression](#24-forecasting-future-housing-values-using-regression)**  
-
-3. **[Data Collection and Preprocessing](#3-data-collection-and-preprocessing)**  
-   - **[3.1 Data Sources](#31-data-sources)**  
-   - **[3.2 Variables and Descriptions](#32-variables-and-descriptions)**  
-   - **[3.3 Data Cleaning](#33-data-cleaning)**  
-   - **[3.4 Data Merging](#34-data-merging)**  
-
-4. **[Methodology](#4-methodology)**  
-   - **[4.1 Hypothesis Testing for Market Value Differences](#41-hypothesis-testing-for-market-value-differences-methodology)**  
-         - **[4.1.1. Market values differences between occupied and vacant housing units](#411-market-values-differences-between-occupied-and-vacant-housing-units)**    
-         - **[4.1.2 Market values differences between fair market rent (FMK)](#412-market-values-differences-between-fair-market-rent-fmk)**   
+3. **[Methodology](#3-methodology)**  
+   - **[3.1 Hypothesis Testing for Market Value Differences](#31-hypothesis-testing-for-market-value-differences-methodology)**  
+         **[3.1.1. Market values differences between occupied and vacant housing units](#311-market-values-differences-between-occupied-and-vacant-housing-units)**    
+         **[3.1.2 Market values differences between fair market rent (FMK)](#312-market-values-differences-between-fair-market-rent-fmk)**   
          
-   - **[4.2 Regression Analysis for Current Housing Market Values for Single Family Units for Year 2013](#42-regression-analysis-for-current-housing-market-values-for-single-family-units-for-year-2013)**
-   - **[4.3 Future Market Value Forecasting](#43-future-market-value-forecasting)** 
+   - **[3.2 Regression Analysis for Current Housing Market Values for Single Family Units for Year 2013](#32-regression-analysis-for-current-housing-market-values-for-single-family-units-for-year-2013)**
+   - **[3.3 Future Market Value Forecasting](#33-future-market-value-forecasting)** 
 
-5. **[Conclusion and Recommendations](#5-conclusion-and-recommedations)**
-   - **[5.1 Key Findings](#51-key-findings)** 
-   - **[5.2 Policy Implications](#52-policy-implications)**
-   - **[5.3 Recommendations for Stakeholders](#53-recommendations-for-stakeholders)**
-
+4. **[Conclusion and Recommendations](#4-conclusion-and-recommedations)**
+   - **[4.1 Key Findings](#41-key-findings)** 
+   - **[4.2 Policy Implications](#42-policy-implications)**
+   - **[4.3 Recommendations for Stakeholders](#43-recommendations-for-stakeholders)**
 
 ---
 
@@ -57,14 +50,14 @@ The datasets are collected from the **Housing Affordability Data System (HADS)**
 - Train a regression model to predict the housing market values for the year 2013.
 - Develop a separate model to forecast housing market values for the following year (2014).
 
-## 3. Data Collection and Preprocessing
+## 2. Data Collection and Preprocessing
 
-### 3.1 Data Sources
+### 2.1 Data Sources
 The data used in this analysis is collected from the **Housing Affordability Data System** (HADS) provided by HUD. The dataset contains housing-level variables collected across multiple years (2005, 2007, 2009, 2011, and 2013) from the **Housing Affordability Data System** (HADS).  
 
 Link dataset: [US Housing values data](https://www.huduser.gov/portal/datasets/hads/hads.html)
 
-### 3.2 Variables and Descriptions
+### 2.2 Variables and Descriptions
 List of variables using in this project.  
 
 
@@ -99,21 +92,21 @@ List of variables using in this project.
 | **ASSISTED** | Numerical | Did the housing unit receive some governmental ‘assistance’? <br> 0 - Not assisted <br> 1 - Assisted <br> -9 - Not Known. |
 
 
-### 3.3 Data Cleaning
+### 2.3 Data Cleaning
 - Data Errors: Remove entries with values suspected to be erroneous, specifically those below $1,000 USD.
 - Housing units entries for the year 2005, 2007, 2009, 2011 and 2013 after deleting suspicous entries are 30514,27785, 31317, 85050 and 36675 respectively.   
 
-### 3.4 Data Merging
+### 2.4 Data Merging
 
 **Power Query** was used to import and transform five CSV files. Unnecessary columns were removed, leaving 27 relevant columns for analysis. Values under $1000 were filtered and cleaned. The cleaned data was then merged into a single workbook for further analysis.  
 
 ---
 
-## 4. Methodology
+## 3. Methodology
 
-### 4.1 Hypothesis Testing for Market Value Differences
+### 3.1 Hypothesis Testing for Market Value Differences
 
-#### 4.1.1 Market values differences between occupied and vacant housing units
+#### 3.1.1 Market values differences between occupied and vacant housing units
 Data pre-processing: Using column `STATUS` which display the occupied('1') and vacant status ('3')
 Analysis steps:  
 - Create a pivot table each year which column is the variable `STATUS` and row is the variable `CONTROL` (unique housing id) and value is the variable `VALUE` of the housing units.  
@@ -155,7 +148,7 @@ __The sample output for year 2005 as below__
 
 - The hypothesis test across the five years fails to reject the null hypothesis, indicating that the values for occupied housing units are greater than those for vacant housing units in the US across all five years.
 
-#### 4.1.2 Market values differences between fair market rent (FMK)
+#### 3.1.2 Market values differences between fair market rent (FMK)
 
 - Display the top 10 Rows Using VLOOKUP to Combine FMK Across Years
 
@@ -279,7 +272,7 @@ __Conclusion:__
 
 Based on the analysis, the Fair Market Rent (FMR) of housing units increased every year, with a significant spike in 2009. This increase is supported by the exceptionally large t-statistic of 124.32, indicating a statistically significant difference.  
 
-### 4.2 Regression Analysis for Current Housing Market Values for Single Family Units for Year 2013
+### 3.2 Regression Analysis for Current Housing Market Values for Single Family Units for Year 2013
 
 ### **Data Preprocessing:**
 
@@ -385,7 +378,7 @@ __Interpretation of R-square__
 The R-square and adjusted R-square are about ___0.55___, indicating that the model explains about 55 percentage of variation in the market value of housing units.  
 The results emphasize the multifaceted nature of housing market values, where economic factors (income, rent, poverty) and physical characteristics of the property (size, rooms, year built) all play a critical role in determining market prices.
 
-### 4.3 Future Market Value Forecasting 
+### 3.3 Future Market Value Forecasting 
 
 This model perform the predicted regression model that is using X variables in year 2011 and Y variable in year 2013.
 
@@ -464,15 +457,15 @@ Using the coefficients from this regression model and using the set of 'X' varia
 
 ---
 
-## 5. Conclusion and Recommedations
+## 4. Conclusion and Recommedations
 
-### 5.1 Key Findings
+### 4.1 Key Findings
 The study found that market rents and housing values have consistently increased over the years. There are significant differences in market values between occupied and vacant units, with occupied units typically having higher market values.
 
-### 5.2 Policy Implications
+### 4.2 Policy Implications
 The increasing trend in housing rents may indicate a growing affordability issue for lower-income households. Policymakers should consider interventions to control rent inflation and increase housing accessibility.
 
-### 5.3 Recommendations for Stakeholders
+### 4.3 Recommendations for Stakeholders
 - **Real Estate Investors**: Focus on areas with high growth in market values and rents.
 - **Government Agencies**: Implement rent controls and affordable housing programs to address increasing rent pressures.
 - **Homebuyers**: Consider long-term market trends and potential appreciation when purchasing properties.
