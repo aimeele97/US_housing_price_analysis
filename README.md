@@ -7,7 +7,7 @@
    - **[1.2 Problem Statement](#12-problem-statement)**  
   
 **[2. Data Collection and Preprocessing](#3-data-collection-and-preprocessing)**  
-   - **[2.1 Data Sources](#21-data-sources)**  
+   - **[2.1 Data Source](#21-data-source)**  
    - **[2.2 Columns Definition](#22-columns-definition)**  
    - **[2.3 Data Cleaning](#23-data-cleaning)**  
    - **[2.4 Data Integration](#24-data-integration)**  
@@ -42,7 +42,7 @@ A regression model will then be developed using selected independent variables t
 
 ## 2. Data Collection and Preprocessing
 
-### 2.1 Data Sources
+### 2.1 Data Source
 
 The data used in this analysis is collected from the **Housing Affordability Data System** (HADS) provided by HUD. The dataset contains housing-level variables collected across multiple years (2005, 2007, 2009, 2011, and 2013) from the **Housing Affordability Data System** (HADS).  
 
