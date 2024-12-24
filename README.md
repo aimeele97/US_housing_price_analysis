@@ -137,7 +137,7 @@ __The sample output for year 2005 as below__
 
 **Result:**  
 
-- After performing hypothesis testing for all five years, the null hypothesis could not be rejected in any case. For example, in 2005, the t-statistic was 0.77, which falls between the critical values of -1.96 and 1.96 (the t-cutoff). Since the t-statistic does not fall into the rejection region, this indicates that there is insufficient evidence to conclude that there is a significant difference between the values for occupied housing units and vacant housing units in the US. This pattern was consistent across all five years, suggesting that the values for occupied housing units were generally greater than those for vacant housing units during the observed period.  
+-- After conducting hypothesis testing for all five years, we failed to reject the null hypothesis in every case. For example, in 2005, the t-statistic was 0.77, which lies between the critical values of -1.96 and 1.96 (the t-cutoff). The p-value is 0.221, which is much larger than the significance level of 0.05. Since the t-statistic does not fall in the rejection region and the p-value is large, this indicates there is insufficient evidence to conclude that there is a statistical difference between the market values of occupied and vacant housing units in the U.S. during the observed period.  
 
 #### 3.1.2 Market values differences between fair market rent (FMK)
 I used the unique CONTROL variable, which represents the housing ID, and applied the VLOOKUP function to retrieve the corresponding FMK values from the years 2005 to 2013. Afterward, I removed any records where the FMK value was missing in any of those years.  
@@ -257,7 +257,7 @@ I used Paired t-Test hypothesis for this analysis
 | **p-value (two-tail)**       | 0                   |                     |
 | **t Critical (two-tail)**    | 1.960               |                     |
 
-__Conclusion:__
+__Result:__
 
 - **t-Statistic**: In all comparisons, the t-statistics are much higher than the critical values, indicating that the differences between the FMR values for each pair of years are statistically significant.
   
