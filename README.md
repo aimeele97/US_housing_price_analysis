@@ -2,24 +2,23 @@
 
 ## **Table of Contents**
 
-1. **[Business Problem Overview](#1-business-problem-overview)**  
+**[1. Business Problem Overview](#1-business-problem-overview)**  
    - **[1.1 Objective](#11-objective)**  
    - **[1.2 Problem Statement](#12-problem-statement)**
-2. **[Data Collection and Preprocessing](#3-data-collection-and-preprocessing)**  
+**[2. Data Collection and Preprocessing](#3-data-collection-and-preprocessing)**  
    - **[2.1 Data Sources](#21-data-sources)**  
    - **[2.2 Columns Definition](#22-columns-definition)**  
    - **[2.3 Data Cleaning](#23-data-cleaning)**  
    - **[2.4 Data Integration](#24-data-integration)**  
 
-3. **[Methodology](#3-methodology)**  
+**[3. Methodology](#3-methodology)**  
    - **[3.1 Hypothesis Testing for Market Value Differences](#31-hypothesis-testing-for-market-value-differences-methodology)**  
         - **[3.1.1. Market values differences between occupied and vacant housing units](#311-market-values-differences-between-occupied-and-vacant-housing-units)**    
         - **[3.1.2 Market values differences between fair market rent (FMK)](#312-market-values-differences-between-fair-market-rent-fmk)**   
-         
    - **[3.2 Regression Analysis for Current Housing Market Values for Single Family Units for Year 2013](#32-regression-analysis-for-current-housing-market-values-for-single-family-units-for-year-2013)**
    - **[3.3 Future Market Value Forecasting](#33-future-market-value-forecasting)** 
 
-4. **[Conclusion and Recommendations](#4-conclusion-and-recommedations)**
+**[4. Conclusion and Recommendations](#4-conclusion-and-recommedations)**
    - **[4.1 Key Findings](#41-key-findings)** 
    - **[4.2 Policy Implications](#42-policy-implications)**
    - **[4.3 Recommendations for Stakeholders](#43-recommendations-for-stakeholders)**
