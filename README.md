@@ -6,7 +6,7 @@
    - **[1.1 Objective](#11-objective)**  
    - **[1.2 Problem Statement](#12-problem-statement)**  
   
-**[2. Data Collection and Preprocessing](#3-data-collection-and-preprocessing)**  
+**[2. Data Collection and Preprocessing](#2-data-collection-and-preprocessing)**  
    - **[2.1 Data Source](#21-data-source)**  
    - **[2.2 Columns Definition](#22-columns-definition)**  
    - **[2.3 Data Cleaning](#23-data-cleaning)**  
