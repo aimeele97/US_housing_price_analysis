@@ -139,7 +139,7 @@ __The sample output for year 2005 as below__
 
 - Based on the hypothesis testing for the housing market data, we fail to reject the null hypothesis. Specifically, with a t-statistic of 0.77, which is well within the critical values of -1.96 and 1.96 (for a two-tailed test), and a p-value of 0.443 (which is much greater than the significance level of 0.05), there is no statistically significant evidence to suggest a difference in the market values of occupied and vacant housing units.  
 
-Therefore, the analysis indicates that, for the period tested, there is insufficient evidence to conclude that the market values for occupied housing units differ from those of vacant housing units in the U.S.  
+- Therefore, the analysis indicates that, for the period tested, there is insufficient evidence to conclude that the market values for occupied housing units differ from those of vacant housing units in the U.S.  
 
 #### 3.1.2 Market values differences between fair market rent (FMK)
 I used the unique CONTROL variable, which represents the housing ID, and applied the VLOOKUP function to retrieve the corresponding FMK values from the years 2005 to 2013. Afterward, I removed any records where the FMK value was missing in any of those years.  
