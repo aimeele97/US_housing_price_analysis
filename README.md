@@ -1,4 +1,4 @@
-# **Housing Values Analysis with Hypothesis Testing (2005-2013)**
+# **Housing Values Analysis with Hypothesis Testing (2005-2014)**
 
 ## **Table of Contents**
 
@@ -30,7 +30,7 @@
 
 ### 1.1 Objective
 
-The objective of this project is to analyze trends in the U.S. housing market from 2005 to 2013, focusing on identifying the key factors that influence housing values during this period. The analysis aims to uncover variables such as occupancy status, fair market rents, and other economic factors that impact housing market prices. The primary tool for this analysis is `Excel`, where data will be cleaned, manipulated, and examined using various statistical methods. 
+The objective of this project is to analyze trends in the U.S. housing market from 2005 to 2014, focusing on identifying the key factors that influence housing values during this period. The analysis aims to uncover variables such as occupancy status, fair market rents, and other economic factors that impact housing market prices. The primary tool for this analysis is `Excel`, where data will be cleaned, manipulated, and examined using various statistical methods. 
 A regression model will then be developed using selected independent variables to predict housing market prices for 2013. The model will be extended to include additional independent variables from 2011 and dependent variable from 2013 to forecast housing prices for the following year. The model's performance will be evaluated using R-squared to assess its accuracy, and further refinement and development will be conducted to improve its predictive power over time.  
 
 ### 1.2 Problem Statement
@@ -490,7 +490,7 @@ For improving the housing market values regression model, the key recommendation
 
 ### **Conclusion**
 
-This project successfully analyzed trends in the U.S. housing market from 2005 to 2013, revealing significant insights into how occupancy status, fair market rents, and economic events impact housing prices. The analysis provided a foundation for developing regression models that predict housing market values and forecast future trends. Although the model explained a substantial portion of market value variation, further improvements are needed for higher accuracy. The project also highlighted the need for more efficient data processing tools and the potential policy implications of the findings for real estate professionals, government officials, and other stakeholders involved in housing markets.  
+This project successfully analyzed trends in the U.S. housing market from 2005 to 2014, revealing significant insights into how occupancy status, fair market rents, and economic events impact housing prices. The analysis provided a foundation for developing regression models that predict housing market values and forecast future trends. Although the model explained a substantial portion of market value variation, further improvements are needed for higher accuracy. The project also highlighted the need for more efficient data processing tools and the potential policy implications of the findings for real estate professionals, government officials, and other stakeholders involved in housing markets.  
 
    __Data Analysis with Excel Limitations__   
 
